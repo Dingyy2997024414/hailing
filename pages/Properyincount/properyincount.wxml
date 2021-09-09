@@ -1,0 +1,133 @@
+<!--pages/Propertypage/propertypage.wxml-->
+<view>
+  <mp-navigation-bar   background="{{background}}" title='{{titleInfo}}' > </mp-navigation-bar>
+<view class="titleCss">
+    <text class="titleTextCss">{{titleInfo}}</text>
+  </view>
+
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label labelCss">
+             
+              <text class="textCss">条码编号:</text>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input inputCss" placeholder-class="place-holder" placeholder="直接显示" bindinput ="property_code"/>
+           
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label labelCss">
+             
+              <text class="textCss">资产属性:</text>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input inputCss" placeholder-class="place-holder" placeholder="资产属性" bindinput ="property_dalei"/>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label labelCss">
+             
+              <text class="textCss">资产名称:</text>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input inputCss" placeholder-class="place-holder" placeholder="资产名称"  bindinput ="property_xiaolei"/>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label labelCss">
+             
+              <text class="textCss">资产型号:</text>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input inputCss" placeholder-class="place-holder" placeholder="资产型号"  bindinput ="property_name"/>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label labelCss">
+             
+              <text class="textCss">购买时间:</text>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker class="toast_date" mode="date" value="{{date}}" start="" end="" bindchange="property_intime">
+              <button type="default">{{intime}}</button>
+          </picker>
+           <!-- <input class="weui-input inputCss" placeholder-class="place-holder" placeholder="购买时间"  bindinput ="property_intime"/>--> 
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label labelCss">
+             
+              <text class="textCss">存放位置:</text>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+        <!--默认在仓库-->
+        <text class="textCss" >仓库</text>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label labelCss">
+             
+              <text class="textCss">购买价格:</text>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input inputCss" placeholder-class="place-holder" placeholder="购买价格"  bindinput ="property_price"/>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label labelCss">
+             
+              <text class="textCss">登记人员:</text>
+            </view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input inputCss" placeholder-class="place-holder" placeholder="登记人员姓名"  bindinput ="property_using"/>
+        </view>
+    </view>
+    <view class='content'>
+
+    <!-- 此处为获取图片的方法
+
+       -->
+  <view class='img-box'>
+    <text class="textCss">入库凭证:</text>
+    <view class='img-list'>
+      <block wx:for="{{detailPics}}" wx:key="index">
+        <view class='img-item'>
+          <image src='{{item}}' bindlongpress="bindlongpressimg" data-id='{{index}}'></image>
+        </view>
+      </block>
+      <view class='chooseimg' bindtap='uploadDetailImage'>
+        <view class="weui-uploader__input-box"></view>
+      </view>
+    </view>
+    <view class='tips'>长按对应的图片即可删除</view>
+  </view>
+</view>
+   
+  <view class="page__bd page__bd_spacing addBnCss">
+      <button class="weui-btn" type="primary" bindtap="submitporpertyincount" style="position: relative; left: -10rpx; top: -2rpx">确定</button>
+      
+  </view>
+
+</view>
+</view>
+
+
+
+

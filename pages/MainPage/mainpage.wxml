@@ -1,0 +1,63 @@
+<!--pages/MainPage/mainpage.wxml-->
+
+<view class="container">
+  <image class="image" src='https://api.dujin.org/bing/1366.php'></image>
+  <view class="searchpage">
+        <mp-searchbar  ext-class="page__bd" bindinput="inputprocess" bindselectresult="selectResult"   search="{{search}}"></mp-searchbar>
+  </view>
+  
+</view>
+
+
+<scroll-view class="container2" style="width: 750rpx; height: 95rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+ <view class="scrolltxt">
+ <view class="marquee_box">
+  <view class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+  <text>{{text}}</text>
+  <text style="margin-right:{{marquee_margin}}px;"></text>
+  <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>  
+  </view>
+ </view>
+ </view>
+</scroll-view>
+
+
+<view class="menulist">
+  <view class="itemlist">
+    <image  class="image2" src="http://qxx01kcj3.hd-bkt.clouddn.com/%E7%89%A9%E5%93%81%E6%90%9C%E7%B4%A2.png"></image>
+    <text>物品搜索</text>
+  </view>
+  <view class="itemlist" bindtap="toppropertyincount">
+    <image class="image2"  src="http://qxx01kcj3.hd-bkt.clouddn.com/%E7%99%BB%E8%AE%B0%E5%85%A5%E5%BA%93.png"></image>
+    <text bindtap="toppropertyincount">登记入库</text>
+  </view>
+</view>
+<view class="menulist">
+  <view class="itemlist">
+    <image class="image2"  src="http://qxx01kcj3.hd-bkt.clouddn.com/%E5%80%9F%E8%BF%98%E7%99%BB%E8%AE%B0.png"></image>
+    <text>借还登记</text>
+  </view>
+  <view class="itemlist" bindtap="toppropertypage">
+    <image class="image2"  src="http://qxx01kcj3.hd-bkt.clouddn.com/%E5%8F%98%E6%9B%B4%E5%87%BA%E5%BA%93.png"></image>
+    <text bindtap="toppropertypage">变更出库</text>
+  </view>
+</view>
+<view class="menulist">
+  <view class="itemlist" bindtap="topworkplanpage">
+    <image class="image2"  src="http://qxx01kcj3.hd-bkt.clouddn.com/%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92.png"></image>
+    <text bindtap="topworkplanpage">工作计划</text>
+  </view>
+  <view class="itemlist">
+    <image class="image2"  src="http://qxx01kcj3.hd-bkt.clouddn.com/%E5%80%BC%E7%8F%AD%E6%89%93%E5%8D%A1.png"></image>
+    <text>值班打卡</text>
+  </view>
+</view>
+<button style="position: relative; left: 0rpx; top: 125rpx" bindtap="scancode">按钮</button>
+
+
+
+
+
+
+   
+   

@@ -1,0 +1,78 @@
+/* pages/MainPage/mainpage.wxss */
+/*Bing壁纸设置区域设置*/
+.container{
+  width: 100%;
+  height: 400rpx;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.container image{
+  position: absolute;
+  width: 100%;
+  height: 450rpx;
+}
+.up{
+  position: absolute;
+  z-index: 1;
+}
+/*搜索框区域设置*/
+.searchpage{
+  width: 90%;
+  height: 50rpx;
+  margin: 0;
+  padding: 160px;
+  position: relative;
+}
+/*
+.page__bd{
+  opacity: 90%;
+}
+*/
+/*文字滚动条区域设置*/
+.container2 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.scrolltxt{
+  padding:0 20rpx;
+  background:#f8f8f8;
+}
+.marquee_box {
+  position:relative;
+  color:#333;
+  height:90rpx;
+  display:block;
+  overflow:hidden;
+} 
+.marquee_text {
+  white-space: nowrap;
+  position:absolute;
+  top:0;
+  font-size:14px;
+  height:90rpx;
+  line-height:90rpx;
+}
+
+/*功能模块区域设置*/
+.menulist image{
+  width:200rpx;
+  height: 200rpx;
+}
+
+.menulist{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.menulist .itemlist{
+  display: flex;
+  flex-direction:column;
+}
+
+.menulist text{
+  text-align:center;
+}

@@ -1,0 +1,23 @@
+{
+  "pages": [
+    
+    "pages/MainPage/mainpage",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/Propertypage/propertypage",
+    "pages/Properyincount/properyincount",
+    "pages/WorkPlan/workplan"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  }
+}
